@@ -1,3 +1,6 @@
+Edited by Anna Dahlgren
+
+
 Lydia, a PHP-based, MVC-inspired CMF
 ====================================
 
