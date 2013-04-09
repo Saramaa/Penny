@@ -1,36 +1,85 @@
 <!doctype html>
-<html lang='en'> 
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="sv"> <!--<![endif]-->
 <head>
-  <meta charset='utf-8'/>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/i/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
   <title><?=$title?></title>
-	<link rel='shortcut icon' href='<?=$favicon?>'/>
-  <link rel='stylesheet' href='<?=$stylesheet?>'/>
+  <meta name="description" content="<?=$meta_description?>">
+
+  <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <link rel="stylesheet" href="theme/style.css">
+
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+  <!-- All JavaScript at the bottom, except this Modernizr build.
+       Modernizr enables HTML5 elements & feature detects for optimal performance.
+       Create your own custom Modernizr build: www.modernizr.com/download/ -->
+  <script src="js/libs/modernizr-2.5.0.min.js"></script>
+  <style>
+    <?=$style?>
+  </style>
 </head>
 <body>
-  <div id='wrap-header'>
-    <div id='header'>
-      <div id='login-menu'>
-        <?=login_menu()?>
-      </div>
-      <div id='banner'>
-        <a href='<?=base_url()?>'><img class='site-logo' src='<?=$logo?>' alt='logo' width='<?=$logo_width?>' height='<?=$logo_height?>' /></a>
-        <p class='site-title'><a href='<?=base_url()?>'><?=$header?></a></p>
-        <p class='site-slogan'><?=$slogan?></p>
-      </div>
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+  <header id="above">
+    <?=getHTMLForKmomNavlinks($navkmom, "nav-kmom")?>
+  </header>
+
+  <header id="header">
+    <div id="banner">
+      <a href="index.php">
+        <img class="site-logo" src="img/IMG_6504.JPG" alt = "Anna" width ="80" height= "80" />
+      </a>
+      <p class="site-title">phpmvc</p>
+      <p class="site-slogan">Mina jobb med php och mvc</p>
     </div>
+    <?=getHTMLForNavigation($navbar, "navbar")?>
+  </header>
+  
+  <div id="main" role="main">
+    <?=$main?>
   </div>
-  <div id='wrap-main'>
-    <div id='main' role='main'>
-      <?=get_messages_from_session()?>
-      <?=@$main?>
-      <?=render_views()?>
-    </div>
-  </div>
-  <div id='wrap-footer'>
-    <div id='footer'>
-      <?=$footer?>
-      <?=get_debug()?>
-    </div>
-  </div>
+
+  <footer id="footer">
+
+    <p>&copy; Anna Dahlgren</p>
+   
+  </footer>
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+
+  <!-- scripts concatenated and minified via build script -->
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+  <!-- end scripts -->
+
+  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+       mathiasbynens.be/notes/async-analytics-snippet -->
+  <script>
+    var _gaq=[['_setAccount','UA-22093351-1'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
 </body>
-</html>
+</html> 

@@ -28,6 +28,8 @@ body{margin:0;padding:0;color:#333;background-color:#fff;
 /**
  * Login menu
  */
+ 
+ 
 #login-menu{float:right;font-size:smaller;}
 #login-menu img.gravatar{vertical-align:middle;}
 #login-menu a{text-decoration:none;}
@@ -38,6 +40,7 @@ body{margin:0;padding:0;color:#333;background-color:#fff;
 /**
  * Banner
  */
+ 
 #banner {display:table;margin-bottom:10px;}
 
 .site-logo,
@@ -58,6 +61,7 @@ body{margin:0;padding:0;color:#333;background-color:#fff;
 /**
  * Links
  */
+ 
 a         {color:inherit;}
 a:link    {}
 a:visited {}
@@ -69,6 +73,7 @@ a:active  {}
 /**
  * Headings
  */
+ 
 h1{border-bottom:3px double #ccc;padding-bottom:4px;}
 h2{border-bottom:1px solid #ccc;padding-bottom:4px;}
 
@@ -76,6 +81,7 @@ h2{border-bottom:1px solid #ccc;padding-bottom:4px;}
 /**
  * Forms
  */
+ 
 input,textarea{font:inherit;}
 input[readonly]{color:#666;}
 label{font-size:smaller;}
@@ -106,5 +112,6 @@ padding: 0.8em; margin-bottom: 1em; border: 2px solid #ddd; }
 /**
  * Misc
  */
+ 
 .smaller-text{font-size:smaller;}
 .silent{color:#999;}
