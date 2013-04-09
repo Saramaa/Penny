@@ -1,1 +1,0 @@
-<p>Footer column eight</p>

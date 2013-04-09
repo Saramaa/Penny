@@ -5,40 +5,28 @@
  *
  * @package LydiaCore
  */
- 
 
 // ---------------------------------------------------------------------------------------
 //
 // PHASE: BOOTSTRAP
 //
-define('LYDIA_INSTALL_PATH', __DIR__);
+define('LYDIA_INSTALL_PATH', dirname(__FILE__));
 define('LYDIA_SITE_PATH', LYDIA_INSTALL_PATH . '/site');
 
 require(LYDIA_INSTALL_PATH.'/src/bootstrap.php');
 
-$ly = CLydia::Instance()->Init();
-
-
-// Allow siteowner to add own code or overwrite existning. Call init function if defined.
-require(LYDIA_SITE_PATH.'/functions.php');
-if(function_exists('lySiteInit')) {
-  lySiteInit();
-}
+$ly = CLydia::Instance();
 
 
 // ---------------------------------------------------------------------------------------
 //
 // PHASE: FRONTCONTROLLER ROUTE
 //
-if(!defined('LYDIA_PASS_FRONTCONTROLLER')) {
-  $ly->FrontControllerRoute();
-}
+$ly->FrontControllerRoute();
 
 
 // ---------------------------------------------------------------------------------------
 //
 // PHASE: THEME ENGINE RENDER
 //
-if(!defined('LYDIA_PASS_THEMEENGINE')) {
-  $ly->ThemeEngineRender();
-}
+$ly->ThemeEngineRender();
