@@ -2,7 +2,7 @@
 /**
  * My own me-page to start with.
  */
-include("config.php");
+include("site/config.php");
 
 // Create the data array which is to be used in the template file.
 $data['title'] = "Anna Dahlgren";
@@ -24,5 +24,5 @@ Detta &auml;r min sista termin, s&aring; till sommaren hoppas jag p&aring; arbet
 EOD;
 
 // Hand over to the template engine.
-include(__DIR__."/themes/core/template.php"); 
+include("themes/core/template.php"); 
 
