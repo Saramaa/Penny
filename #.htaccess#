@@ -1,6 +1,0 @@
-ewriteEngine on
-RewriteBase /~ankw11/phpmvc/mom2/
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-
-RewriteRule (.*) index.php/$1 [NC,L]
