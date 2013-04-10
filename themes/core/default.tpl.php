@@ -20,7 +20,9 @@
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
-  <link rel="stylesheet" href="themes/core/style.css">
+  <link rel="stylesheet" href="core/style.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/normalize.css">
 
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 
@@ -37,18 +39,18 @@
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
   <header id="above">
-    <?=getHTMLForKmomNavlinks($navkmom, "nav-kmom")?>
+    
   </header>
 
   <header id="header">
     <div id="banner">
       <a href="index.php">
-        <img class="site-logo" src="img/IMG_6504.JPG" alt = "Anna" width ="80" height= "80" />
+        <img class="site-logo" src="../img/IMG_6504.JPG" alt = "Anna" width ="80" height= "80" />
       </a>
       <p class="site-title">phpmvc</p>
       <p class="site-slogan">Mina jobb med php och mvc</p>
     </div>
-    <?=getHTMLForNavigation($navbar, "navbar")?>
+  <?=getHTMLForNavigation($navbar, "navbar")?>
   </header>
   
   <div id="main" role="main">

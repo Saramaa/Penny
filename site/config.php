@@ -1,8 +1,5 @@
 <?php
-/**
- * Site configuration, this file is changed by user per site.
- *
- */
+
 
 /**
  * Set level of error reporting
@@ -18,6 +15,12 @@ ini_set('display_errors', 1);
  * querystring  = 2      => index.php?q=controller/method/arg1/arg2/arg3
  */
 $ly->config['url_type'] = 1;
+
+$data['navbar'] = array(
+  'index'         => array('text'=>'Me',  'url'=>'main.php'),
+  'redovisning'   => array('text'=>'Redovisning',  'url'=>'redovisning.php'),
+  'viewsource'    => array('text'=>'K&auml;llkod', 'url'=>'source.php'),
+);
 
 /**
  * Set a base_url to use another than the default calculated
@@ -62,7 +65,7 @@ $ly->config['controllers'] = array(
 /**
  * Settings for the theme.
  */
-$ly->config['theme'] = array(
+$ly->config['themes'] = array(
   // The name of the theme in the theme directory
   'name'    => 'core', 
 );

@@ -83,7 +83,7 @@ class CLydia implements ISingleton {
 	 */
   public function ThemeEngineRender() {
     // Get the paths and settings for the theme
-    $themeName 	= $this->config['theme']['name'];
+    $themeName 	= $this->config['themes']['name'];
     $themePath 	= LYDIA_INSTALL_PATH . "/themes/{$themeName}";
     $themeUrl		= $this->request->base_url . "themes/{$themeName}";
     

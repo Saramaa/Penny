@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Helpers for the template file.
@@ -12,17 +11,6 @@ function getHTMLForNavigation($items, $id) {
   foreach($items as $key => $item) {
     $selected = ($p == $key) ? " class='selected'" : null; 
     @$html .= "<a href='{$item['url']}'{$selected}>{$item['text']}</a>\n";
-  }
-  return "<nav id='$id'>\n{$html}</nav>\n";
-}
-
-
-/**
- * Create HTML for navigation links among kmoms.
- */
-function getHTMLForKmomNavlinks($items, $id) {
-  foreach($items as $key => $item) {
-    @$html .= empty($item['url']) ? $item['text'] : "<a href='{$item['url']}'{$selected}>{$item['text']}</a>\n" ;
   }
   return "<nav id='$id'>\n{$html}</nav>\n";
 }

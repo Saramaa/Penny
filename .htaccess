@@ -1,5 +1,6 @@
 RewriteEngine on
 
+RewriteBase /~ankw11/phpmvc/mom2/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
