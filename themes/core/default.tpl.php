@@ -20,7 +20,7 @@
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
-  <link rel="stylesheet" href="core/style.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/normalize.css">
 

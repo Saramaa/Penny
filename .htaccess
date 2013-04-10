@@ -1,6 +1,6 @@
 RewriteEngine on
 
-RewriteBase /~ankw11/phpmvc/mom2/
+RewriteBase /~ankw11/phpmvc/mom2/pages/main.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 

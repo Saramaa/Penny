@@ -65,7 +65,7 @@ $ly->config['controllers'] = array(
 /**
  * Settings for the theme.
  */
-$ly->config['themes'] = array(
+$ly->config['theme'] = array(
   // The name of the theme in the theme directory
   'name'    => 'core', 
 );
