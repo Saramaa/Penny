@@ -20,9 +20,8 @@
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="../themes/core/style.css">
+  <link rel="stylesheet" href="../themes/core/normalize.css">
 
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 
