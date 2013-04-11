@@ -22,7 +22,7 @@ men nu &auml;r det ju UTF-8, s&aring; jag fick leta upp funktionen d&auml;r jag 
 Jag har googlat mig fram till det jag fastnat p&aring; (bland annat tecknen f&ouml;r &aring;, &auml; och &ouml;) och jag anser att jag l&ouml;st allt p&aring; ett bra s&auml;tt.<br/>
 Jag k&ouml;rde ocks&aring; igenom GitHub och testade det enligt dokumentet, men det var efter jag fixat sidan.<br/>
 Jag har allts&aring; inte anv&auml;nt det till detta moment, utan enbart till ett test f&ouml;r att se hur det fungerar.<br/><br/>
-Det jag jobbat i i detta moment &auml;r:<br/>
+Det jag jobbat i i detta moment &auml;r:<br/></p>
 <ul>
 <li>Putty</li>
 <li>WinScp</li>
@@ -31,7 +31,7 @@ Det jag jobbat i i detta moment &auml;r:<br/>
 <li>JEdit</li>
 </ul>
 <br/>
-Att anv&auml;nda sig av en boilerplate tycker jag &auml;r ett v&auml;ldigt smart och tidssparande s&auml;tt.<br />
+<p>Att anv&auml;nda sig av en boilerplate tycker jag &auml;r ett v&auml;ldigt smart och tidssparande s&auml;tt.<br />
 Jag tycker att HTML5Boilerplate verkar helt okej! Jag har ju inget annat att j&auml;mf&ouml;ra med dock, men jag tycker den k&auml;nns bra.<br/>
 Vad jag fann extra intressant? Hmm... Jo, det skulle nog vara att det faktiskt finns v&auml;ldigt mycket bakom kulisserna,<br/>
 som man inte kan se p&aring; ytan. Det &auml;r intressant, att en webbsida som kan verka v&auml;ldigt enkel, kan ha s&aring; mycket koder bakom sig!<br/>
@@ -43,32 +43,35 @@ Nu ska jag g&aring; vidare till n&auml;sta moment, och ser fram emot det :)
 <h1> Kursmoment 2 </h1>
 <h3>Lite inledande text</h3>
 <p>Keep It Simple Stupid. Ja, det sprack direkt...<br/>
-Jag tyckte jag hade rätt så gott om tid att prova lite på egen hand till att börja med.<br/>
-Jag började greja lite här, greja lite där, och ja, testa mig fram helt enkelt.<br/>
-Sen, som en blixt från klar himmel, drabbades hela familjen av sjukdom, en efter en. Helt plötsligt försvann all min "gott om tid!".<br/>
-Började få lite panik då jag inte fick ordning på det som jag ville, så till slut bestämde jag mig för att ta efter så mycket som möjligt från lydia.<br/>
-Jag la in mina egna sidor (me-sidan och redovisningssidan, samt source) i en egen mapp också, samt laddade upp på GitHub.<br/>
-Där har jag nog laddat upp miljoner gånger under detta kursmoment, efter alla ändringar jag gjort...<br/><br/>
-Tidigare erfarenheter av just detta är lika med noll, åtminstone vad gäller kodning. Jag känner igen tänket MVC sedan tidigare dock.<br/>
-Jag har mer att titta på, och ändra, i mitt ramverk (som förövrigt heter FunnyBunny). Det jag vill ändra är bl.a "$ ly" till mitt egna.<br/>
-<i>Hur är det förresten man skriver för att inte behöva ha ett mellanslag mellan "$" och "ly"?</i><br/>
-Dessa ändringar kommer jag göra lite allt eftersom, då jag prioriterar att få in uppgiften/uppgifterna i tid istället.<br/></p>
+Jag tyckte jag hade r&auml;tt s&aring; gott om tid att prova lite p&aring; egen hand till att b&ouml;rja med.<br/>
+Jag b&ouml;rjade greja lite h&auml;r, greja lite d&auml;r, och ja, testa mig fram helt enkelt.<br/>
+Sen, som en blixt fr&aring;n klar himmel, drabbades hela familjen av sjukdom, en efter en. Helt pl&ouml;tsligt f&ouml;rsvann all min "gott om tid!".<br/>
+B&ouml;rjade f&aring; lite panik d&aring; jag inte fick ordning p&aring; det som jag ville, s&aring; till slut best&auml;mde jag mig f&ouml;r att ta efter s&aring; mycket som m&ouml;jligt fr&aring;n lydia.<br/>
+Jag la in mina egna sidor (me-sidan och redovisningssidan, samt source) i en egen mapp ocks&aring;, samt laddade upp p&aring; GitHub.<br/>
+D&auml;r har jag nog laddat upp miljoner g&aring;nger under detta kursmoment, efter alla &auml;ndringar jag gjort...<br/><br/>
+Tidigare erfarenheter av just detta &auml;r lika med noll, &aring;tminstone vad g&auml;ller kodning. Jag k&auml;nner igen t&auml;nket MVC sedan tidigare dock.<br/>
+Jag har mer att titta p&aring;, och &auml;ndra, i mitt ramverk (som f&ouml;r&ouml;vrigt heter FunnyBunny). Det jag vill &auml;ndra &auml;r bl.a "$ ly" till mitt egna.<br/>
+<i>Hur &auml;r det f&ouml;rresten man skriver f&ouml;r att inte beh&ouml;va ha ett mellanslag mellan "$" och "ly"?</i><br/>
+Dessa &auml;ndringar kommer jag g&ouml;ra lite allt eftersom, d&aring; jag prioriterar att f&aring; in uppgiften/uppgifterna i tid ist&auml;llet.<br/></p>
 
 <h3>Ramverkets namn</h3>
 <p>Mitt ramverk heter som sagt FunnuBunny. <br/>
-Jag satt och försökte komma på ett namn, men fick hjärnsläpp. Samtidigt går sambon omkring och nynnar på den gamla melodin:<br/>
-"Funny Bunny heter jag, och jag är så go och gla...", ja ni vet.<br/>
-Där föddes den idén.<br/></p>
+Jag satt och f&ouml;rs&ouml;kte komma p&aring; ett namn, men fick hj&auml;rnsl&auml;pp. Samtidigt g&aring;r sambon omkring och nynnar p&aring; den gamla melodin:<br/>
+"Funny Bunny heter jag, och jag &auml;r s&aring; go och gla...", ja ni vet.<br/>
+D&auml;r f&ouml;ddes den id&eacute;n.<br/></p>
 
 <h3>Tutorials</h3>
-<p>De tutorials jag kikade på var <a link href ='http://dbwebb.se/forum/viewtopic.php?f=14&t=46'>Mos Lydia</a> och <br/></p>
+<p>De tutorials jag kikade p&aring; var <a link href ='http://dbwebb.se/forum/viewtopic.php?f=14&t=46'>Mos Lydia</a> och
+<a link href = 'http://www.phpro.org/tutorials/Model-View-Controller-MVC.html'>denna</a>.<br/>
+Jag kikade runt p&aring; lite mer, men best&auml;mde mig f&ouml;r att s&auml;tta mig in i dessa tv&aring; lite b&auml;ttre.<br/>
+Jag har f&ouml;ljt Lydia ganska s&aring; exakt, kollat igenom alla koder och tryckt fram och tillbaka hundratusentals g&aring;nger. La till min egna mapp "pages" och "img".</p>
 
-<h3>Vad tänkte jag?</h3>
-<p>Vad jag tänkte när jag gjorde grundstrukturen beskrivs i första stycket.<br/>
-Jag hade som sagt tänkt göra det lite på egen hand till att börja med, men fick ändra mina planer lite. (Så länge?)</p>
+<h3>Vad t&auml;nkte jag?</h3>
+<p>Vad jag t&auml;nkte n&auml;r jag gjorde grundstrukturen beskrivs i f&ouml;rsta stycket.<br/>
+Jag hade som sagt t&auml;nkt g&ouml;ra det lite p&aring; egen hand till att b&ouml;rja med, men fick &auml;ndra mina planer lite. (S&aring; l&auml;nge?)</p>
 
 <h3>GitHub?</h3>
-<p>Ja, det finns på GitHub. <a link href ='https://github.com/annaapelsin/FunnyBunny'>(Här)</a>
+<p>Ja, det finns p&aring; GitHub. <a link href ='https://github.com/annaapelsin/FunnyBunny'>(H&auml;r)</a>
 EOD;
 
 // Hand over to the template engine.
