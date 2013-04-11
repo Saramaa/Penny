@@ -38,7 +38,37 @@ som man inte kan se p&aring; ytan. Det &auml;r intressant, att en webbsida som k
 Nu ska jag g&aring; vidare till n&auml;sta moment, och ser fram emot det :)
 </p>
 
+<hr> 
 
+<h1> Kursmoment 2 </h1>
+<h3>Lite inledande text</h3>
+<p>Keep It Simple Stupid. Ja, det sprack direkt...<br/>
+Jag tyckte jag hade rätt så gott om tid att prova lite på egen hand till att börja med.<br/>
+Jag började greja lite här, greja lite där, och ja, testa mig fram helt enkelt.<br/>
+Sen, som en blixt från klar himmel, drabbades hela familjen av sjukdom, en efter en. Helt plötsligt försvann all min "gott om tid!".<br/>
+Började få lite panik då jag inte fick ordning på det som jag ville, så till slut bestämde jag mig för att ta efter så mycket som möjligt från lydia.<br/>
+Jag la in mina egna sidor (me-sidan och redovisningssidan, samt source) i en egen mapp också, samt laddade upp på GitHub.<br/>
+Där har jag nog laddat upp miljoner gånger under detta kursmoment, efter alla ändringar jag gjort...<br/><br/>
+Tidigare erfarenheter av just detta är lika med noll, åtminstone vad gäller kodning. Jag känner igen tänket MVC sedan tidigare dock.<br/>
+Jag har mer att titta på, och ändra, i mitt ramverk (som förövrigt heter FunnyBunny). Det jag vill ändra är bl.a "$ ly" till mitt egna.<br/>
+<i>Hur är det förresten man skriver för att inte behöva ha ett mellanslag mellan "$" och "ly"?</i><br/>
+Dessa ändringar kommer jag göra lite allt eftersom, då jag prioriterar att få in uppgiften/uppgifterna i tid istället.<br/></p>
+
+<h3>Ramverkets namn</h3>
+<p>Mitt ramverk heter som sagt FunnuBunny. <br/>
+Jag satt och försökte komma på ett namn, men fick hjärnsläpp. Samtidigt går sambon omkring och nynnar på den gamla melodin:<br/>
+"Funny Bunny heter jag, och jag är så go och gla...", ja ni vet.<br/>
+Där föddes den idén.<br/></p>
+
+<h3>Tutorials</h3>
+<p>De tutorials jag kikade på var <a link href ='http://dbwebb.se/forum/viewtopic.php?f=14&t=46'>Mos Lydia</a> och <br/></p>
+
+<h3>Vad tänkte jag?</h3>
+<p>Vad jag tänkte när jag gjorde grundstrukturen beskrivs i första stycket.<br/>
+Jag hade som sagt tänkt göra det lite på egen hand till att börja med, men fick ändra mina planer lite. (Så länge?)</p>
+
+<h3>GitHub?</h3>
+<p>Ja, det finns på GitHub. <a link href ='https://github.com/annaapelsin/FunnyBunny'>(Här)</a>
 EOD;
 
 // Hand over to the template engine.

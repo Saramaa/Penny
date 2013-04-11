@@ -16,11 +16,7 @@ ini_set('display_errors', 1);
  */
 $ly->config['url_type'] = 1;
 
-$data['navbar'] = array(
-  'index'         => array('text'=>'Me',  'url'=>'main.php'),
-  'redovisning'   => array('text'=>'Redovisning',  'url'=>'redovisning.php'),
-  'viewsource'    => array('text'=>'K&auml;llkod', 'url'=>'source.php'),
-);
+
 
 /**
  * Set a base_url to use another than the default calculated

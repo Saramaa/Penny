@@ -49,6 +49,7 @@
       <p class="site-title">phpmvc</p>
       <p class="site-slogan">Mina jobb med php och mvc</p>
     </div>
+
   <?=getHTMLForNavigation($navbar, "navbar")?>
   </header>
   

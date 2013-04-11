@@ -1,4 +1,5 @@
 <?php
+
 /**
  * All requests routed through here. This is an overview of what actaully happens during
  * a request.
