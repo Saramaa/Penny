@@ -2,36 +2,24 @@
 /**
  * Helpers for the template file.
  */
-
-/**
- * Create HTML for a navbar.
- */
-
-function getHTMLForNavigation($items, $id) 
-{
-	 $html ="";
-	if($items)
-	{
-  $p = basename($_SERVER['SCRIPT_NAME'], '.php');
-  foreach($items as $key => $item) {
-    $selected = ($p == $key) ? " class='selected'" : null; 
-    @$html .= "<a href='{$item['url']}'{$selected}>{$item['text']}</a>\n";
-  }
-  	}
-  return "<nav id='$id'>\n{$html}</nav>\n";
-}
+ 
+$ly->data['header'] = 'phpmvc';
+$ly->data['slogan'] = 'Mina jobb med php och mvc';
+$ly->data['favicon']      = 'http://www.student.bth.se/~ankw11/phpmvc/mom3/img/IMG_6504.JPG';
+$ly->data['logo']         = 'http://www.student.bth.se/~ankw11/phpmvc/mom3/img/IMG_6504.JPG';
+$ly->data['logo_width']   = 80;
+$ly->data['logo_height']  = 80;
+$ly->data['footer']  = '<p>&copy; Anna Dahlgren</p>';
+$ly->data['navbar'] = <<<EOD
+<nav id = 'navbar'>
+<a href="http://www.student.bth.se/~ankw11/phpmvc/mom2/pages/main.php">Me</a>
+<a href="http://www.student.bth.se/~ankw11/phpmvc/mom2/pages/redovisning.php">Redovisning</a>
+<a href="http://www.student.bth.se/~ankw11/phpmvc/mom3/guestbook">G&auml;stbok</a>
+<a href="http://www.student.bth.se/~ankw11/phpmvc/mom2/pages/source.php">K&auml;llkod</a>
 
 
-/**
- * Get URL to current page.
- */
-function getCurrentUrl() {
-  $url = "http";
-  $url .= (@$_SERVER["HTTPS"] == "on") ? 's' : '';
-  $url .= "://";
-  $serverPort = ($_SERVER["SERVER_PORT"] == "80") ? '' :
-    (($_SERVER["SERVER_PORT"] == 443 && @$_SERVER["HTTPS"] == "on") ? '' : ":{$_SERVER['SERVER_PORT']}");
-  $url .= $_SERVER["SERVER_NAME"] . $serverPort . htmlspecialchars($_SERVER["REQUEST_URI"]);
-  return $url;
-}
+
+
+</nav>
+EOD;
 

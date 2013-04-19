@@ -1,11 +1,31 @@
 <?php
-
+/**
+ * Site configuration, this file is changed by user per site.
+ *
+ */
 
 /**
  * Set level of error reporting
  */
 error_reporting(-1);
 ini_set('display_errors', 1);
+
+
+/**
+ * Set what to show as debug or developer information in the get_debug() theme helper.
+ */
+$ly->config['debug']['lydia'] = false;
+$ly->config['debug']['session'] = true;
+$ly->config['debug']['timer'] = true;
+$ly->config['debug']['db-num-queries'] = true;
+$ly->config['debug']['db-queries'] = true;
+
+
+/**
+ * Set database(s).
+ */
+$ly->config['database'][0]['dsn'] = 'sqlite:' . LYDIA_SITE_PATH . '/data/.ht.sqlite';
+
 
 /**
  * What type of urls should be used?
@@ -17,26 +37,30 @@ ini_set('display_errors', 1);
 $ly->config['url_type'] = 1;
 
 
-
 /**
  * Set a base_url to use another than the default calculated
  */
 $ly->config['base_url'] = null;
 
+
 /**
  * Define session name
  */
 $ly->config['session_name'] = preg_replace('/[:\.\/-_]/', '', $_SERVER["SERVER_NAME"]);
+$ly->config['session_key']  = 'lydia';
+
 
 /**
  * Define server timezone
  */
 $ly->config['timezone'] = 'Europe/Stockholm';
 
+
 /**
  * Define internal character encoding
  */
 $ly->config['character_encoding'] = 'UTF-8';
+
 
 /**
  * Define language
@@ -56,6 +80,7 @@ $ly->config['language'] = 'en';
 $ly->config['controllers'] = array(
   'index'     => array('enabled' => true,'class' => 'CCIndex'),
   'developer' => array('enabled' => true,'class' => 'CCDeveloper'),
+  'guestbook' => array('enabled' => true,'class' => 'CCGuestbook'),
 );
 
 /**

@@ -5,8 +5,8 @@
 include("../site/config.php");
 
 // Create the data array which is to be used in the template file.
-$data['title'] = "Anna Dahlgren - Redovisning";
-$data['meta_description'] = "Min egna me-sida, skapad f&ouml;r kursen phpmvc med HTML5Boilerplate.";
+$data['title'] = "Redovisning";
+$data['meta_description'] = "Redovisning";
 $data['main'] = <<<EOD
 <h1>Kursmoment 1</h1>
 
@@ -72,6 +72,42 @@ Jag hade som sagt t&auml;nkt g&ouml;ra det lite p&aring; egen hand till att b&ou
 
 <h3>GitHub?</h3>
 <p>Ja, det finns p&aring; GitHub. <a link href ='https://github.com/annaapelsin/FunnyBunny'>(H&auml;r)</a>
+
+
+<hr> 
+
+<h1> Kursmoment 3 </h1>
+<h3>Lite inledande text</h3>
+<p>&Auml;nnu en g&aring;ng tog det l&auml;ngre tid &auml;n vad det beh&ouml;vde g&ouml;ra f&ouml;r min del.<br />
+Kanske tar jag mig vatten &ouml;ver huvudet n&auml;r jag vill f&ouml;rs&ouml;ka g&ouml;ra det p&aring; mitt s&auml;tt, eller s&aring; blir jag bara stressad av tiden.<br/>
+Jag &auml;r trots allt mammaledig samtidigt som jag studerar, vilket inneb&auml;r att tiden &auml;r redan ganska tight.<br/>
+Att ha tre barn och ett hem att sk&ouml;ta, samtidigt som man l&auml;ser p&aring; heltid, &auml;r minst sagt en utmaning :)<br/>
+Dock f&ouml;rs&ouml;ker jag s&aring; gott jag kan. Jag har testat fram och tillbaka, och det har kr&aring;nglat mycket.
+<br/>
+Jag fick f&ouml;r mig att man skulle fylla i sina databasuppgifter i Lydia (som med CodeIgniter), men jag kunde inte f&ouml;rst&aring; hur det skulle se ut.<br/>
+Fr&aring;gade i forumet och fick d&auml;r veta att det inte beh&ouml;vdes. D&aring; hade jag redan &auml;gnat en massa timmar &aring;t att f&ouml;rs&ouml;ka f&aring; kontakt med databasen...<br/>
+Det fungerade n&auml;mligen inte f&ouml;rst. Men, det m&aring;ste varit ett annat problem i v&auml;gen d&auml;r.<br/>
+Det slutade med att jag kopierade hela Lydia, och gick igenom fil f&ouml;r fil f&ouml;r att se vad allt g&ouml;r. <br/>
+Ja, sedan b&ouml;rjade jag t&auml;nja p&aring; gr&auml;nserna lite igen... Jag testade att ma min g&auml;stbok med samma CSS som min Me-sidan.<br/>
+Det gick inte l&ouml;sa att ha alla filer i min mom3-mapp, f&ouml;r d&aring; kommer f&ouml;ljande felmeddelande:
+"Notice: Use of undefined constant LYDIA_SITE_PATH - assumed 'LYDIA_SITE_PATH' in /home/saxon/students/20112/ankw11/www/phpmvc/mom3/site/config.php on line 27"<br/>
+Nu dyker det visserligen upp ett par felmeddelanden till, men det har med default.tpl.php att g&ouml;ra, och det &auml;r jag medveten om.<br/>
+Med tanke p&aring; detta v&auml;ljer jag att uppdatera redovisningstexten och menyn fr&aring;n kursmoment 2, med l&auml;nk till g&auml;stboken.</p>
+<h3>CodeIgniter</h3>
+<p>Jag fick en bra uppfattning om CodeIgniter, och det m&auml;rks att man kan koda p&aring; olika s&auml;tt, men att det &auml;nd&aring; f&ouml;ljer samma m&ouml;nster.<br/>
+Den tutorial jag kikade p&aring; var 
+<a link href ='http://tutorialcodeigniter.com/beginners/codeigniter-mvc.html'>denna</a>.<br/>
+Jag gjorde det man skulle g&ouml;ra, och fixade min egna g&auml;stbok. Gjorde dock inga egna &auml;ndringar pga tidsbristen.<br/>
+L&auml;nken till g&auml;stboken finns <a link href ='http://www.student.bth.se/~ankw11/phpmvc/mom3/CI/index.php/guestbook'>h&auml;r</a>.</p>
+<h3>MVC-strukturen</h3>
+<p>Jag kan inte riktigt s&auml;ga att jag har ett fullt grepp om strukturen, men jag f&ouml;rst&aring;r mer och mer f&ouml;r varje g&aring;ng jag tittar p&aring; koden.<br/>
+Jag tycker det verkar vara en bra och logisk struktur. L&auml;tt att fels&ouml;ka och lagom med kod p&aring; varje st&auml;lle. Helt kanon!</p>
+<h3>Extrauppgifterna</h3>
+<p>Jag kikade p&aring; b&aring;de Lydias viewhantering och spamhanteringen, men jag valde att inte implementera n&aring;got av det f&ouml;r tillf&auml;llet.<br/>
+Jag k&auml;nner att jag beh&ouml;ver komma vidare till n&auml;sta moment, som f&ouml;rhoppningsvis inte ska kr&aring;ngla s&aring; som det gjort nu, och d&aring; &auml;r det <br/>
+mycket m&ouml;jligt att jag finslipar koderna lite :)</p>
+
+
 EOD;
 
 // Hand over to the template engine.
