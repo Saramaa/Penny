@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
 RewriteEngine on
-RewriteBase /~ankw11/phpmvc/mom3/
+RewriteBase /~ankw11/phpmvc/mom4/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 

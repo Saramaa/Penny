@@ -3,6 +3,7 @@
  * Helpers for the template file.
  */
  
+$ly->data['title'] = 'phpmvc';
 $ly->data['header'] = 'phpmvc';
 $ly->data['slogan'] = 'Mina jobb med php och mvc';
 $ly->data['favicon']      = 'http://www.student.bth.se/~ankw11/phpmvc/mom3/img/IMG_6504.JPG';

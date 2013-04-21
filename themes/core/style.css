@@ -199,6 +199,13 @@ font-size: 0.8em;
 #navbar a.selected
 {background:#999;border:2px solid #666;}
 
+/**
+ * Login menu
+ */
+#login-menu{float:right;font-size:normal;}
+#login-menu img.gravatar{float:left;padding: 4px}
+#login-menu a{text-decoration:none;}
+#login-menu a:hover{text-decoration:underline;}
 
 /**
  * Fonts

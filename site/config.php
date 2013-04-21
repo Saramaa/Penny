@@ -15,7 +15,7 @@ ini_set('display_errors', 1);
  * Set what to show as debug or developer information in the get_debug() theme helper.
  */
 $ly->config['debug']['lydia'] = false;
-$ly->config['debug']['session'] = true;
+$ly->config['debug']['session'] = false;
 $ly->config['debug']['timer'] = true;
 $ly->config['debug']['db-num-queries'] = true;
 $ly->config['debug']['db-queries'] = true;
@@ -46,7 +46,7 @@ $ly->config['base_url'] = null;
 /**
  * Define session name
  */
-$ly->config['session_name'] = preg_replace('/[:\.\/-_]/', '', $_SERVER["SERVER_NAME"]);
+$ly->config['session_name'] = preg_replace('/[:\.\/-_]/', '', __DIR__);
 $ly->config['session_key']  = 'lydia';
 
 
@@ -81,6 +81,8 @@ $ly->config['controllers'] = array(
   'index'     => array('enabled' => true,'class' => 'CCIndex'),
   'developer' => array('enabled' => true,'class' => 'CCDeveloper'),
   'guestbook' => array('enabled' => true,'class' => 'CCGuestbook'),
+  'user'      => array('enabled' => true,'class' => 'CCUser'),
+  'acp'       => array('enabled' => true,'class' => 'CCAdminControlPanel'),
 );
 
 /**
