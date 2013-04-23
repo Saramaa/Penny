@@ -215,6 +215,18 @@ h1,h2{
   border-bottom:1px solid #dddddd;
 } 
 
+/**
+ * Forms
+ */
+input{font:inherit;}
+input[readonly]{color:#666;}
+label{font-size:normal;}
+.validation-failed{border:2px solid red;}
+.validation-message{color:red;font-size:smaller;}
+.form-action-link{font-size:smaller;}
+
+
+
 
 /**
  * Links

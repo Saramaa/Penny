@@ -13,10 +13,10 @@ $ly->data['logo_height']  = 80;
 $ly->data['footer']  = '<p>&copy; Anna Dahlgren</p>';
 $ly->data['navbar'] = <<<EOD
 <nav id = 'navbar'>
-<a href="http://www.student.bth.se/~ankw11/phpmvc/mom2/pages/main.php">Me</a>
-<a href="http://www.student.bth.se/~ankw11/phpmvc/mom2/pages/redovisning.php">Redovisning</a>
+<a href="http://www.student.bth.se/~ankw11/phpmvc/mom2/main.php">Me</a>
+<a href="http://www.student.bth.se/~ankw11/phpmvc/mom2/redovisning.php">Redovisning</a>
 <a href="http://www.student.bth.se/~ankw11/phpmvc/mom3/guestbook">G&auml;stbok</a>
-<a href="http://www.student.bth.se/~ankw11/phpmvc/mom2/pages/source.php">K&auml;llkod</a>
+<a href="source.php">K&auml;llkod</a>
 
 
 
