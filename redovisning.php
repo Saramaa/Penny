@@ -1,13 +1,34 @@
-<?php
-/**
- * My own me-page to start with.
- */
-include("../site/config.php");
-
-// Create the data array which is to be used in the template file.
-$data['title'] = "Redovisning";
-$data['meta_description'] = "Redovisning";
-$data['main'] = <<<EOD
+<!doctype html>
+<html lang='en'> 
+<head>
+  <meta charset='utf-8'/>
+  <title>Anna Dahlgren</title>
+	<link rel='shortcut icon' href='http://www.student.bth.se/~ankw11/phpmvc/mom4/img/IMG_6504.JPG'/>
+  <link rel='stylesheet' href='http://www.student.bth.se/~ankw11/phpmvc/mom4/themes/core/style.css'/>
+</head>
+<body>
+  <div id='wrap-header'>
+    <div id='header'>
+    <div id='login-menu'>
+        <nav id='login-menu'><a href='http://www.student.bth.se/~ankw11/phpmvc/mom4/user/login'>login</a> </nav>      </div>
+    <div id='banner'>
+     <a href='http://www.student.bth.se/~ankw11/phpmvc/mom4/'>
+        <img class='site-logo' src='http://www.student.bth.se/~ankw11/phpmvc/mom4/img/IMG_6504.JPG' alt='logo' width='80' height='80' />
+      </a>
+      <p class='site-title'>phpmvc</p>
+      <p class='site-slogan'>Mina jobb med php och mvc</p>
+    </div>
+    <nav id = 'navbar'>
+<a href="main.php">Me</a>
+<a href="redovisning.php">Redovisning</a>
+<a href="guestbook">G&auml;stbok</a>
+<a href="user/login">Logga in</a>
+<a href="source.php">K&auml;llkod</a>
+</nav>
+    </div>
+  </div>
+  <div id='wrap-main'>
+    <div id='main' role='main'>
 <h1>Kursmoment 1</h1>
 
 <p>D&aring; var jag ig&aring;ng!<br/>
@@ -61,8 +82,8 @@ Jag satt och f&ouml;rs&ouml;kte komma p&aring; ett namn, men fick hj&auml;rnsl&a
 D&auml;r f&ouml;ddes den id&eacute;n.<br/></p>
 
 <h3>Tutorials</h3>
-<p>De tutorials jag kikade p&aring; var <a link href ='http://dbwebb.se/forum/viewtopic.php?f=14&t=46'>Mos Lydia</a> och
-<a link href = 'http://www.phpro.org/tutorials/Model-View-Controller-MVC.html'>denna</a>.<br/>
+<p>De tutorials jag kikade p&aring; var <a href ='http://dbwebb.se/forum/viewtopic.php?f=14&amp;t=46'>Mos Lydia</a> och
+<a  href = 'http://www.phpro.org/tutorials/Model-View-Controller-MVC.html'>denna</a>.<br/>
 Jag kikade runt p&aring; lite mer, men best&auml;mde mig f&ouml;r att s&auml;tta mig in i dessa tv&aring; lite b&auml;ttre.<br/>
 Jag har f&ouml;ljt Lydia ganska s&aring; exakt, kollat igenom alla koder och tryckt fram och tillbaka hundratusentals g&aring;nger. La till min egna mapp "pages" och "img".</p>
 
@@ -71,8 +92,7 @@ Jag har f&ouml;ljt Lydia ganska s&aring; exakt, kollat igenom alla koder och try
 Jag hade som sagt t&auml;nkt g&ouml;ra det lite p&aring; egen hand till att b&ouml;rja med, men fick &auml;ndra mina planer lite. (S&aring; l&auml;nge?)</p>
 
 <h3>GitHub?</h3>
-<p>Ja, det finns p&aring; GitHub. <a link href ='https://github.com/annaapelsin/FunnyBunny'>(H&auml;r)</a>
-
+<p>Ja, det finns p&aring; GitHub. <a href ='https://github.com/annaapelsin/FunnyBunny'>(H&auml;r)</a>
 
 <hr> 
 
@@ -96,19 +116,24 @@ Med tanke p&aring; detta v&auml;ljer jag att uppdatera redovisningstexten och me
 <h3>CodeIgniter</h3>
 <p>Jag fick en bra uppfattning om CodeIgniter, och det m&auml;rks att man kan koda p&aring; olika s&auml;tt, men att det &auml;nd&aring; f&ouml;ljer samma m&ouml;nster.<br/>
 Den tutorial jag kikade p&aring; var 
-<a link href ='http://tutorialcodeigniter.com/beginners/codeigniter-mvc.html'>denna</a>.<br/>
+<a href ='http://tutorialcodeigniter.com/beginners/codeigniter-mvc.html'>denna</a>.<br/>
 Jag gjorde det man skulle g&ouml;ra, och fixade min egna g&auml;stbok. Gjorde dock inga egna &auml;ndringar pga tidsbristen.<br/>
-L&auml;nken till g&auml;stboken finns <a link href ='http://www.student.bth.se/~ankw11/phpmvc/mom3/CI/index.php/guestbook'>h&auml;r</a>.</p>
+L&auml;nken till g&auml;stboken finns <a href ='http://www.student.bth.se/~ankw11/phpmvc/mom3/CI/index.php/guestbook'>h&auml;r</a>.</p>
 <h3>MVC-strukturen</h3>
 <p>Jag kan inte riktigt s&auml;ga att jag har ett fullt grepp om strukturen, men jag f&ouml;rst&aring;r mer och mer f&ouml;r varje g&aring;ng jag tittar p&aring; koden.<br/>
 Jag tycker det verkar vara en bra och logisk struktur. L&auml;tt att fels&ouml;ka och lagom med kod p&aring; varje st&auml;lle. Helt kanon!</p>
 <h3>Extrauppgifterna</h3>
 <p>Jag kikade p&aring; b&aring;de Lydias viewhantering och spamhanteringen, men jag valde att inte implementera n&aring;got av det f&ouml;r tillf&auml;llet.<br/>
 Jag k&auml;nner att jag beh&ouml;ver komma vidare till n&auml;sta moment, som f&ouml;rhoppningsvis inte ska kr&aring;ngla s&aring; som det gjort nu, och d&aring; &auml;r det <br/>
-mycket m&ouml;jligt att jag finslipar koderna lite :)</p>
-
-
-EOD;
-
-// Hand over to the template engine.
-include("../themes/core/template.php"); 
+mycket m&ouml;jligt att jag finslipar koderna lite :)</p>   
+    </div>
+  </div>
+  <div id='wrap-footer'>
+    <div id='footer'>
+      <p>&copy; Anna Dahlgren</p>
+      <!--get_debug()-->
+     
+    </div>
+  </div>
+</body>
+</html>

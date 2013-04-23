@@ -139,17 +139,48 @@ if(isset($_GET['file'])) {
 EOD;
 }
 
-
-// -------------------------------------------------------------------------------------------
-//
-// Create and print out the html-page
-//
-include("../site/config.php");
-$data['title'] = "Source";
-$data['main'] = <<<EOD
-$html 
-EOD;
-
-include(__DIR__."/../themes/core/template.php"); 
-
 ?>
+
+<!doctype html>
+<html lang='en'> 
+<head>
+  <meta charset='utf-8'/>
+  <title>Anna Dahlgren</title>
+	<link rel='shortcut icon' href='http://www.student.bth.se/~ankw11/phpmvc/mom4/img/IMG_6504.JPG'/>
+  <link rel='stylesheet' href='http://www.student.bth.se/~ankw11/phpmvc/mom4/themes/core/style.css'/>
+</head>
+<body>
+  <div id='wrap-header'>
+    <div id='header'>
+    <div id='login-menu'>
+        <nav id='login-menu'><a href='http://www.student.bth.se/~ankw11/phpmvc/mom4/user/login'>login</a> </nav>      </div>
+    <div id='banner'>
+     <a href='http://www.student.bth.se/~ankw11/phpmvc/mom4/'>
+        <img class='site-logo' src='http://www.student.bth.se/~ankw11/phpmvc/mom4/img/IMG_6504.JPG' alt='logo' width='80' height='80' />
+      </a>
+      <p class='site-title'>phpmvc</p>
+      <p class='site-slogan'>Mina jobb med php och mvc</p>
+    </div>
+    <nav id = 'navbar'>
+<a href="main.php">Me</a>
+<a href="redovisning.php">Redovisning</a>
+<a href="guestbook">G&auml;stbok</a>
+<a href="user/login">Logga in</a>
+<a href="source.php">K&auml;llkod</a>
+</nav>
+    </div>
+  </div>
+  <div id='wrap-main'>
+    <div id='main' role='main'>
+<?=$html?>
+ </div>
+  </div>
+  <div id='wrap-footer'>
+    <div id='footer'>
+      <p>&copy; Anna Dahlgren</p>
+      <!--get_debug()-->
+     
+    </div>
+  </div>
+</body>
+</html>
