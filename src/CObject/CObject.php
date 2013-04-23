@@ -21,8 +21,10 @@ class CObject {
 	/**
 	 * Constructor, can be instantiated by sending in the $ly reference.
 	 */
-	protected function __construct($ly=null) {
-	  if(!$ly) {
+	protected function __construct($ly=null) 
+	{
+	  if(!$ly)
+	  {
 	    $ly = CLydia::Instance();
 	  } 
     $this->config   = &$ly->config;
@@ -102,7 +104,8 @@ class CObject {
 	 * @param $method string the method to use, $url is then the controller or empty for current
 	 * @param $arguments string the extra arguments to send to the method
 	 */
-	protected function CreateUrl($urlOrController=null, $method=null, $arguments=null) {
+	protected function CreateUrl($urlOrController=null, $method=null, $arguments=null) 
+	{
     return $this->request->CreateUrl($urlOrController, $method, $arguments);
   }
 
