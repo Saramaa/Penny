@@ -126,6 +126,37 @@ Jag tycker det verkar vara en bra och logisk struktur. L&auml;tt att fels&ouml;k
 <p>Jag kikade p&aring; b&aring;de Lydias viewhantering och spamhanteringen, men jag valde att inte implementera n&aring;got av det f&ouml;r tillf&auml;llet.<br/>
 Jag k&auml;nner att jag beh&ouml;ver komma vidare till n&auml;sta moment, som f&ouml;rhoppningsvis inte ska kr&aring;ngla s&aring; som det gjort nu, och d&aring; &auml;r det <br/>
 mycket m&ouml;jligt att jag finslipar koderna lite :)</p>   
+<hr> 
+
+<h1> Kursmoment 4 </h1>
+<h3>Lite inledande text</h3>
+<p>Detta kursmoment gick liiite l&auml;ttare &auml;n f&ouml;rra. D&auml;remot st&ouml;tte jag p&aring; lite problem fram&aring;t slutet.<br/>
+Eller, r&auml;ttare sagt d&ouml;k det upp problem lite d&aring; och d&aring;, men de var ganska l&auml;tta att fels&ouml;ka och r&auml;tta till.<br/>
+Det st&auml;mde inte riktigt med guiden och lydia p&aring; GitHub, tyckte jag, s&aring; jag kombinerade de tv&aring; f&ouml;r att f&aring; en b&auml;ttre bild av hur det ska se ut.<br/>
+I slutet hade jag problem med CCAdminControlPanel i vad som k&auml;ndes som en evighet (&aring;tminstone 2-3 dagar), men n&auml;r jag <b>&auml;ntligen</b> hittade felet s&aring; sk&auml;mdes jag.<br/>
+Det var ett l&ouml;jligt litet fel som st&auml;llde till alltihopa. Det pinsamma felet var ett gl&ouml;mt ".php" efter filen... <br/>
+N&aring;ja, man l&auml;r sig n&aring;t varje dag ;)<br/>
+Momentet k&auml;ndes som sagt lite l&auml;ttare, och det tror jag kan bero p&aring; att jag kommer in i koderna och t&auml;nket mer och mer f&ouml;r varje dag.<br/>
+Jag b&ouml;rjar ocks&aring; k&auml;nna mig mer tryggare i att v&aring;ga koda lite mer p&aring; mitt s&auml;tt, men k&auml;nner att jag v&auml;ntar lite med det pga tidsbristen.<br/>
+Om det finns m&ouml;jlighet till det i projektuppgiften, s&aring; kommer jag nog koda med egna ord och fraser (beroende p&aring; hur projektet &auml;r upplagt, har inte kikat p&aring; det &auml;n).<br/>
+Ett litet till&auml;gg &auml;r f&ouml;rresten att det verkar som om det hade varit en f&ouml;rdel att l&auml;st fler kurser i kurspaketet som erbjuds h&auml;r.<br/>
+Jag har bara l&auml;st oophp i det paketet, men det finns tydligen en del viktiga saker i htmlphp, eller vad den kursen nu hette.<br/>
+Men men, att jag klarar mig utan eventuellt relevanta baskunskaper fr&aring;n annan kurs k&auml;nns &auml;nd&aring; positivt, tycker jag.
+</p>
+<h3>CForm</h3>
+<p>En tanke som kommer upp ganska omg&aring;ende &auml;r varf&ouml;r CForm inneh&aring;ller flera klasser (CFormElement & CFormElementText m.m),<br/>
+medan CUser har flera klasser i egna mappar, (t.ex CFormUserCreate & CFormUserLogin m.m.).<br/>
+Finns det n&aring;gon speciell tanke bakom detta som jag missat?<br/></p>
+
+<h3>Slutsats</h3>
+<p>Min slutsats ang&aring;ende detta moment &auml;r att jag tycker att det g&aring;r b&auml;ttre och b&auml;ttre.<br/>
+Det k&auml;nns mer och mer logiskt och pusselbitar b&ouml;rja falla p&aring; plats allt eftersom.<br/>
+Det k&auml;nns som ett tryggt ramverk, eller hur man ska uttrycka det, och jag gillar uppl&auml;gget och allt som den inneh&aring;ller.<br/>
+Att l&auml;ra sig kryptera anv&auml;ndares l&ouml;senord &auml;r ju en v&auml;ldigt viktig del "in the real world", <br/>
+s&aring; det k&auml;nns bra att vi inte "bara" beh&ouml;ver l&auml;ra oss formul&auml;rhantering, utan &auml;ven saker som faktiskt &auml;r viktiga d&auml;rtill.<br/>
+Kursen k&auml;nns v&auml;ldigt seri&ouml;s, m&aring;ste jag s&auml;ga, och det gillar jag skarpt. </p>
+
+
     </div>
   </div>
   <div id='wrap-footer'>
