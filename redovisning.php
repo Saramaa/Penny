@@ -12,7 +12,7 @@
     <div id='login-menu'>
         <nav id='login-menu'><a href='http://www.student.bth.se/~ankw11/phpmvc/mom5/user/login'>login</a> </nav>      </div>
     <div id='banner'>
-     <a href='http://www.student.bth.se/~ankw11/phpmvc/mom4/'>
+     <a href='http://www.student.bth.se/~ankw11/phpmvc/mom5/'>
         <img class='site-logo' src='http://www.student.bth.se/~ankw11/phpmvc/mom5/img/IMG_6504.JPG' alt='logo' width='80' height='80' />
       </a>
       <p class='site-title'>phpmvc</p>
@@ -23,6 +23,7 @@
 <a href="redovisning.php">Redovisning</a>
 <a href="guestbook">G&auml;stbok</a>
 <a href="user/login">Logga in</a>
+<a href="http://www.student.bth.se/~ankw11/phpmvc/mom5/blog">Blogg</a>
 <a href="source.php">K&auml;llkod</a>
 </nav>
     </div>

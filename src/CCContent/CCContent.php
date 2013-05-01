@@ -1,9 +1,9 @@
 <?php
 /**
-* A user controller to manage content.
-* 
-* @package LydiaCore
-*/
+ * A user controller to manage content.
+ * 
+ * @package LydiaCore
+ */
 class CCContent extends CObject implements IController {
 
 
@@ -69,4 +69,4 @@ class CCContent extends CObject implements IController {
   }
   
 
-}
+} 

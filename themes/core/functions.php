@@ -3,7 +3,6 @@
  * Helpers for the template file.
  */
  
-$ly->data['title'] = 'phpmvc';
 $ly->data['header'] = 'phpmvc';
 $ly->data['slogan'] = 'Mina jobb med php och mvc';
 $ly->data['favicon']      = 'http://www.student.bth.se/~ankw11/phpmvc/mom5/img/IMG_6504.JPG';
@@ -17,7 +16,8 @@ $ly->data['navbar'] = <<<EOD
 <a href="http://www.student.bth.se/~ankw11/phpmvc/mom5/redovisning.php">Redovisning</a>
 <a href="http://www.student.bth.se/~ankw11/phpmvc/mom5/guestbook">G&auml;stbok</a>
 <a href="http://www.student.bth.se/~ankw11/phpmvc/mom5/user/login">Logga in</a>
-<a href="source.php">K&auml;llkod</a>
+<a href="http://www.student.bth.se/~ankw11/phpmvc/mom5/blog">Blogg</a>
+<a href="http://www.student.bth.se/~ankw11/phpmvc/mom5/source.php">K&auml;llkod</a>
 
 
 

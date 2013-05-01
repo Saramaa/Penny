@@ -225,6 +225,10 @@ label{font-size:normal;}
 .validation-message{color:red;font-size:smaller;}
 .form-action-link{font-size:smaller;}
 
+.content-edit input[type=text]{width:30em;}
+.content-edit textarea{width:40em;height:15em;}
+
+
 
 
 
@@ -290,6 +294,8 @@ a:hover figure {
  * Misc classes
  */
 .right {float:right;}
+.smaller-text{font-size:smaller;}
+.silent{color:#999;}
 
 
 
