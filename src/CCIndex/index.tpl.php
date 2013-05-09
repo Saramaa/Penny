@@ -1,5 +1,5 @@
 <h1>Index Controller</h1>
-<p>Welcome to Lydia index controller.</p>
+<p>Welcome to FunnyBunny index controller.</p>
 
 <h2>Download</h2>
 <p>You can download FunnyBunny from github.</p>
@@ -14,7 +14,7 @@ to be able to write and create files.</p>
 <blockquote>
 <code>cd FunnyBunny; chmod 777 site/data</code>
 </blockquote>
-
+If you want to use it on the bth server, you also need to change in the .htaccess-file. 
 <p>Second, Lydia has some modules that need to be initialised. You can do this through a 
 controller. Point your browser to the following link.</p>
 <blockquote>
