@@ -3,8 +3,8 @@
 <head>
   <meta charset='utf-8'/>
   <title>Anna Dahlgren</title>
-	<link rel='shortcut icon' href='http://www.student.bth.se/~ankw11/phpmvc/mom6/img/IMG_6504.JPG'/>
-  <link rel='stylesheet' href='http://www.student.bth.se/~ankw11/phpmvc/mom6/themes/grid/style.php'/>
+	<link rel='shortcut icon' href='http://www.student.bth.se/~ankw11/phpmvc/mom7/img/IMG_6504.JPG'/>
+  <link rel='stylesheet' href='http://www.student.bth.se/~ankw11/phpmvc/mom7/themes/grid/style.php'/>
    <?php if(isset($inline_style)): ?><style><?=$inline_style?></style><?php endif; ?>
 </head>
 <body>
@@ -12,10 +12,10 @@
   <div id='inner-wrap-header'>
     <div id='header'>
     <div id='login-menu'>
-        <nav id='login-menu'><a href='http://www.student.bth.se/~ankw11/phpmvc/mom6/user/login'>login</a> </nav>      </div>
+        <nav id='login-menu'><a href='http://www.student.bth.se/~ankw11/phpmvc/mom7/user/login'>login</a> </nav>      </div>
     <div id='banner'>
-     <a href='http://www.student.bth.se/~ankw11/phpmvc/mom6/'>
-        <img id='site-logo' src='http://www.student.bth.se/~ankw11/phpmvc/mom6/img/IMG_6504.JPG' alt='logo' width='80' height='80' />
+     <a href='http://www.student.bth.se/~ankw11/phpmvc/mom7/'>
+        <img id='site-logo' src='http://www.student.bth.se/~ankw11/phpmvc/mom7/img/IMG_6504.JPG' alt='logo' width='80' height='80' />
       </a>
        <span id='site-title'>Anna</span>
          <span id='site-slogan'>Mina jobb med php och mvc</span>
@@ -32,7 +32,7 @@
 <a href="redovisning.php">Redovisning</a>
 <a href="guestbook">G&auml;stbok</a>
 <a href="user/login">Logga in</a>
-<a href="http://www.student.bth.se/~ankw11/phpmvc/mom6/blog">Blogg</a>
+<a href="http://www.student.bth.se/~ankw11/phpmvc/mom7/blog">Blogg</a>
 <a href="source.php">K&auml;llkod</a>
 </nav>
 <h1>Kursmoment 1</h1>

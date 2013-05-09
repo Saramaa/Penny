@@ -44,8 +44,8 @@ $ly->config['base_url'] = null;
 
 
 /**
-* How to hash password of new users, choose from: plain, md5salt, md5, sha1salt, sha1.
-*/
+ * How to hash password of new users, choose from: plain, md5salt, md5, sha1salt, sha1.
+ */
 $ly->config['hashing_algorithm'] = 'sha1salt';
 
 
@@ -63,7 +63,7 @@ $ly->config['session_key']  = 'lydia';
 
 
 /**
- * Define server timezone
+ * Define default server timezone when displaying date and times to the user. All internals are still UTC.
  */
 $ly->config['timezone'] = 'Europe/Stockholm';
 
@@ -92,20 +92,38 @@ $ly->config['language'] = 'en';
 $ly->config['controllers'] = array(
   'index'     => array('enabled' => true,'class' => 'CCIndex'),
   'developer' => array('enabled' => true,'class' => 'CCDeveloper'),
+  'theme'     => array('enabled' => true,'class' => 'CCTheme'),
   'guestbook' => array('enabled' => true,'class' => 'CCGuestbook'),
-  'user'      => array('enabled' => true,'class' => 'CCUser'),
+  'content'   => array('enabled' => true,'class' => 'CCContent'),
   'blog'      => array('enabled' => true,'class' => 'CCBlog'),
   'page'      => array('enabled' => true,'class' => 'CCPage'),
+  'user'      => array('enabled' => true,'class' => 'CCUser'),
   'acp'       => array('enabled' => true,'class' => 'CCAdminControlPanel'),
-  'content'   => array('enabled' => true,'class' => 'CCContent'),
-  'theme'   => array('enabled' => true,'class' => 'CCTheme'),
-  
 );
+
 
 /**
 * Settings for the theme.
 */
 $ly->config['theme'] = array(
-  'name'        => 'grid',        // The name of the theme in the theme directory
-  'stylesheet'  => 'style.php',   // Main stylesheet to include in template files
+  'name'            => 'grid',            // The name of the theme in the theme directory
+  'stylesheet'      => 'style.php',       // Main stylesheet to include in template files
+  'template_file'   => 'index.tpl.php',   // Default template file, else use default.tpl.php
+  // A list of valid theme regions
+  'regions' => array('flash','featured-first','featured-middle','featured-last',
+    'primary','sidebar','triptych-first','triptych-middle','triptych-last',
+    'footer-column-one','footer-column-two','footer-column-three','footer-column-four',
+    'footer',
+  ),
+  // Add static entries for use in the template file. 
+  'data' => array(
+    'header' => 'Anna',
+    'slogan' => 'Mina jobb med php och mvc',
+    'favicon' => 'http://www.student.bth.se/~ankw11/phpmvc/mom6/img/IMG_6504.JPG',
+    'logo' => 'http://www.student.bth.se/~ankw11/phpmvc/mom6/img/IMG_6504.JPG',
+    'logo_width'  => 80,
+    'logo_height' => 80,
+    'footer' => '<p>&copy; Anna Dahlgren</p>',
+
+  ),
 );

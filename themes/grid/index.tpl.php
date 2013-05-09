@@ -3,8 +3,8 @@
 <head>
   <meta charset='utf-8'/>
   <title><?=$title?></title>
-	<link rel='shortcut icon' href='<?=$favicon?>'/>
-  <link rel='stylesheet' href='<?=$stylesheet?>'/>
+  <link rel='shortcut icon' href='<?=theme_url($favicon)?>'/>
+  <link rel='stylesheet' href='<?=theme_url($stylesheet)?>'/>
   <?php if(isset($inline_style)): ?><style><?=$inline_style?></style><?php endif; ?>
 </head>
 <body>
@@ -14,10 +14,13 @@
     <div id='header'>
       <div id='login-menu'><?=login_menu()?></div>
       <div id='banner'>
-        <a href='<?=base_url()?>'><img id='site-logo' src='<?=$logo?>' alt='logo' width='<?=$logo_width?>' height='<?=$logo_height?>' /></a>
+        <a href='<?=base_url()?>'><img id='site-logo' src='<?=theme_url($logo)?>' alt='logo' width='<?=$logo_width?>' height='<?=$logo_height?>' /></a>
         <span id='site-title'><a href='<?=base_url()?>'><?=$header?></a></span>
         <span id='site-slogan'><?=$slogan?></span>
       </div>
+      <?php if(region_has_content('navbar')): ?>
+      <div id='navbar'><?=render_views('navbar')?></div>
+      <?php endif; ?>
     </div>
   </div>
 </div>
@@ -42,8 +45,7 @@
 
 <div id='outer-wrap-main'>
   <div id='inner-wrap-main'>
-    <div id='primary'><?=$navbar?>
-    <?=get_messages_from_session()?><?=@$main?><?=render_views('primary')?><?=render_views()?></div>
+    <div id='primary'><?=get_messages_from_session()?><?=@$main?><?=render_views('primary')?><?=render_views()?></div>
     <div id='sidebar'><?=render_views('sidebar')?></div>
   </div>
 </div>
@@ -68,11 +70,7 @@
   </div>
   <?php endif; ?>
   <div id='inner-wrap-footer'>
-    <div id='footer'><?=render_views('footer')?>
-    
-    <?=$footer?>
-    <!--=get_tools()?>=get_debug()?>-->
-    </div>
+    <div id='footer'><?=render_views('footer')?><?=$footer?><?=get_tools()?><?=get_debug()?></div>
   </div>
 </div>
 
