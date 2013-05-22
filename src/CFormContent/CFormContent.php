@@ -2,7 +2,7 @@
 /**
  * A form to manage content.
  * 
- * @package LydiaCore
+ * @package PennyCore
  */
 class CFormContent extends CForm {
 
@@ -52,7 +52,7 @@ class CFormContent extends CForm {
   public function DoDelete($form, $content) {
     $content['id'] = $form['id']['value'];
     $content->Delete();
-    CLydia::Instance()->RedirectTo('content');
+    CPenny::Instance()->RedirectTo('content');
   }
   
   

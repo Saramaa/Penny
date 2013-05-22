@@ -2,13 +2,14 @@
 /**
  * Database wrapper, provides a database API for the framework but hides details of implementation.
  *
- * @package LydiaCore
+ * @package PennyCore
  */
 class CDatabase {
 
 	/**
 	 * Members
 	 */
+	
   private $db = null;
   private $stmt = null;
   private static $numQueries = 0;

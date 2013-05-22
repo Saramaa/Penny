@@ -2,7 +2,7 @@
 /**
  * A form to login the user profile.
  * 
- * @package LydiaCore
+ * @package PennyCore
  */
 class CFormUserLogin extends CForm {
 

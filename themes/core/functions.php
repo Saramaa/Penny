@@ -3,14 +3,14 @@
  * Helpers for the template file.
  */
  
-$ly->data['header'] = 'phpmvc';
-$ly->data['slogan'] = 'Mina jobb med php och mvc';
-$ly->data['favicon']      = 'http://www.student.bth.se/~ankw11/phpmvc/mom6/img/IMG_6504.JPG';
-$ly->data['logo']         = 'http://www.student.bth.se/~ankw11/phpmvc/mom6/img/IMG_6504.JPG';
-$ly->data['logo_width']   = 80;
-$ly->data['logo_height']  = 80;
-$ly->data['footer']  = '<p>&copy; Anna Dahlgren</p>';
-$ly->data['navbar'] = <<<EOD
+$pen->data['header'] = 'phpmvc';
+$pen->data['slogan'] = 'Mina jobb med php och mvc';
+$pen->data['favicon']      = 'http://www.student.bth.se/~ankw11/phpmvc/mom6/img/IMG_6504.JPG';
+$pen->data['logo']         = 'http://www.student.bth.se/~ankw11/phpmvc/mom6/img/IMG_6504.JPG';
+$pen->data['logo_width']   = 80;
+$pen->data['logo_height']  = 80;
+$pen->data['footer']  = '<p>&copy; Anna Dahlgren</p>';
+$pen->data['navbar'] = <<<EOD
 <nav id = 'navbar'>
 <a href="http://www.student.bth.se/~ankw11/phpmvc/mom6/main.php">Me</a>
 <a href="http://www.student.bth.se/~ankw11/phpmvc/mom6/redovisning.php">Redovisning</a>

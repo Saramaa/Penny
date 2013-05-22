@@ -2,7 +2,7 @@
 /**
  * A model for an authenticated user.
  * 
- * @package LydiaCore
+ * @package PennyCore
  */
 class CMUser extends CObject implements IHasSQL, ArrayAccess, IModule {
 
@@ -15,8 +15,8 @@ class CMUser extends CObject implements IHasSQL, ArrayAccess, IModule {
   /**
    * Constructor
    */
-  public function __construct($ly=null) {
-    parent::__construct($ly);
+  public function __construct($pen=null) {
+    parent::__construct($pen);
     $profile = $this->session->GetAuthenticatedUser();
     $this->profile = is_null($profile) ? array() : $profile;
     $this['isAuthenticated'] = is_null($profile) ? false : true;
@@ -53,10 +53,10 @@ class CMUser extends CObject implements IHasSQL, ArrayAccess, IModule {
           $this->db->ExecuteQuery(self::SQL('create table user2group'));
           $this->db->ExecuteQuery(self::SQL('insert into user'), array('anonomous', 'Anonomous, not authenticated', null, 'plain', null, null));
           $password = $this->CreatePassword('root');
-          $this->db->ExecuteQuery(self::SQL('insert into user'), array('root', 'The Administrator', 'root@dbwebb.se', $password['algorithm'], $password['salt'], $password['password']));
+          $this->db->ExecuteQuery(self::SQL('insert into user'), array('root', 'The Administrator', 'root@penny.se', $password['algorithm'], $password['salt'], $password['password']));
           $idRootUser = $this->db->LastInsertId();
           $password = $this->CreatePassword('doe');
-          $this->db->ExecuteQuery(self::SQL('insert into user'), array('doe', 'John/Jane Doe', 'doe@dbwebb.se', $password['algorithm'], $password['salt'], $password['password']));
+          $this->db->ExecuteQuery(self::SQL('insert into user'), array('doe', 'John/Jane Doe', 'doe@penny.se', $password['algorithm'], $password['salt'], $password['password']));
           $idDoeUser = $this->db->LastInsertId();
           $this->db->ExecuteQuery(self::SQL('insert into group'), array('admin', 'The Administrator Group'));
           $idAdminGroup = $this->db->LastInsertId();
@@ -98,13 +98,14 @@ class CMUser extends CObject implements IHasSQL, ArrayAccess, IModule {
       'get group memberships'   => 'SELECT * FROM Groups AS g INNER JOIN User2Groups AS ug ON g.id=ug.idGroups WHERE ug.idUser=?;',
       'update profile'          => "UPDATE User SET name=?, email=?, updated=datetime('now') WHERE id=?;",
       'update password'         => "UPDATE User SET algorithm=?, salt=?, password=?, updated=datetime('now') WHERE id=?;",
+      
+
      );
     if(!isset($queries[$key])) {
       throw new Exception("No such SQL query, key '$key' was not found.");
     }
     return $queries[$key];
   }
-
 
   /**
    * Login by autenticate the user and password. Store user information in session if success.
@@ -184,7 +185,7 @@ class CMUser extends CObject implements IHasSQL, ArrayAccess, IModule {
    */
   public function CreatePassword($plain, $algorithm=null) {
     $password = array(
-      'algorithm'=>($algorithm ? $algoritm : CLydia::Instance()->config['hashing_algorithm']),
+      'algorithm'=>($algorithm ? $algoritm : CPenny::Instance()->config['hashing_algorithm']),
       'salt'=>null
     );
     switch($password['algorithm']) {

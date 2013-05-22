@@ -2,7 +2,7 @@
 /**
  * A user controller to manage content.
  * 
- * @package LydiaCore
+ * @package PennyCore
  */
 class CCContent extends CObject implements IController {
 
@@ -58,15 +58,5 @@ class CCContent extends CObject implements IController {
     $this->Edit();
   }
 
-
-  /**
-   * Init the content database.
-   */
-  public function Init() {
-    $content = new CMContent();
-    $content->Init();
-    $this->RedirectToController();
-  }
-  
 
 } 

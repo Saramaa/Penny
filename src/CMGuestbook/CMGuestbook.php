@@ -2,7 +2,7 @@
 /**
  * A model for a guestbok, to show off some basic controller & model-stuff.
  * 
- * @package LydiaCore
+ * @package PennyCore
  */
 class CMGuestbook extends CObject implements IHasSQL, IModule {
 

@@ -1,8 +1,8 @@
 <?php
 /**
- * To manage and analyse all modules of Lydia.
+ * To manage and analyse all modules of Penny.
  * 
- * @package LydiaCore
+ * @package PennyCore
  */
 class CCModules extends CObject implements IController {
 

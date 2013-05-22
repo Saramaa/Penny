@@ -4,30 +4,30 @@
  * All requests routed through here. This is an overview of what actaully happens during
  * a request.
  *
- * @package LydiaCore
+ * @package PennyCore
  */
 
 // ---------------------------------------------------------------------------------------
 //
 // PHASE: BOOTSTRAP
 //
-define('LYDIA_INSTALL_PATH', dirname(__FILE__));
-define('LYDIA_SITE_PATH', LYDIA_INSTALL_PATH . '/site');
+define('PENNY_INSTALL_PATH', dirname(__FILE__));
+define('PENNY_SITE_PATH', PENNY_INSTALL_PATH . '/site');
 
-require(LYDIA_INSTALL_PATH.'/src/bootstrap.php');
+require(PENNY_INSTALL_PATH.'/src/bootstrap.php');
 
-$ly = CLydia::Instance();
+$pen = CPenny::Instance();
 
 
 // ---------------------------------------------------------------------------------------
 //
 // PHASE: FRONTCONTROLLER ROUTE
 //
-$ly->FrontControllerRoute();
+$pen->FrontControllerRoute();
 
 
 // ---------------------------------------------------------------------------------------
 //
 // PHASE: THEME ENGINE RENDER
 //
-$ly->ThemeEngineRender();
+$pen->ThemeEngineRender();

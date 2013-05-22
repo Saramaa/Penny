@@ -2,7 +2,7 @@
 /**
  * A test controller for themes.
  * 
- * @package LydiaCore
+ * @package PennyCore
  */
 class CCTheme extends CObject implements IController {
 

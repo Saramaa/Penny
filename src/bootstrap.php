@@ -2,7 +2,7 @@
 /**
  * Bootstrapping, setting up and loading the core.
  *
- * @package LydiaCore
+ * @package PennyCore
  */
 
 /**
@@ -10,8 +10,8 @@
  */
 function autoload($aClassName) {
   $classFile = "/src/{$aClassName}/{$aClassName}.php";
-	$file1 = LYDIA_SITE_PATH . $classFile;
-	$file2 = LYDIA_INSTALL_PATH . $classFile;
+	$file1 = PENNY_SITE_PATH . $classFile;
+	$file2 = PENNY_INSTALL_PATH . $classFile;
 	if(is_file($file1)) {
 		require_once($file1);
 	} elseif(is_file($file2)) {
@@ -25,10 +25,28 @@ spl_autoload_register('autoload');
  * Set a default exception handler and enable logging in it.
  */
 function exceptionHandler($e) {
-  echo "Lydia: Uncaught exception: <p>" . $e->getMessage() . "</p><pre>" . $e->getTraceAsString(), "</pre>";
+  echo "Penny: Uncaught exception: <p>" . $e->getMessage() . "</p><pre>" . $e->getTraceAsString(), "</pre>";
 }
 set_exception_handler('exceptionHandler');
 
+function t($str, $args = array()) {
+  if(CPenny::Instance()->config['i18n']) {  
+   $str = gettext($str);
+  }
+
+  // santitize and replace arguments
+  if(!empty($args)) {
+    foreach($args as $key => $val) {
+      switch($key[0]) {
+        case '@': $args[$key] = htmlEnt($val); break;
+        case '!': 
+        default: /* pass through */ break;
+      }
+    }
+    return strtr($str, $args);
+  }
+  return $str;
+}
 
 /**
  * Helper, include a file and store it in a string. Make $vars available to the included file.
@@ -48,7 +66,7 @@ function getIncludeContents($filename, $vars=array()) {
  * Helper, wrap html_entites with correct character encoding
  */
 function htmlent($str, $flags = ENT_COMPAT) {
-  return htmlentities($str, $flags, CLydia::Instance()->config['character_encoding']);
+  return htmlentities($str, $flags, CPenny::Instance()->config['character_encoding']);
 }
 
 

@@ -2,7 +2,7 @@
 /**
  * A user controller  to manage login and view edit the user profile.
  * 
- * @package LydiaCore
+ * @package PennyCore
  */
 class CCUser extends CObject implements IController {
 
@@ -23,6 +23,8 @@ class CCUser extends CObject implements IController {
                 ->AddInclude(__DIR__ . '/index.tpl.php', array(
                   'is_authenticated'=>$this->user['isAuthenticated'], 
                   'user'=>$this->user,
+                  'Admin'=>$this->user['hasRoleAdmin'],
+                  
                 ));
   }
   
@@ -42,7 +44,11 @@ class CCUser extends CObject implements IController {
                   'is_authenticated'=>$this->user['isAuthenticated'], 
                   'user'=>$this->user,
                   'profile_form'=>$form->GetHTML(),
+                  'Admin'=>$this->user['hasRoleAdmin'],
                 ));
+   
+           
+                
   }
   
 
@@ -84,7 +90,7 @@ class CCUser extends CObject implements IController {
     $this->views->SetTitle('Login')
                 ->AddInclude(__DIR__ . '/login.tpl.php', array(
                   'login_form' => $form,
-                  'allow_create_user' => CLydia::Instance()->config['create_new_users'],
+                  'allow_create_user' => CPenny::Instance()->config['create_new_users'],
                   'create_user_url' => $this->CreateUrl(null, 'create'),
                 ));
   }

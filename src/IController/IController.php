@@ -2,7 +2,7 @@
 /**
  * Interface for classes implementing a controller.
  *
- * @package LydiaCore
+ * @package PennyCore
  */
 interface IController {
 	public function Index();

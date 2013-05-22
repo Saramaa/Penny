@@ -70,7 +70,8 @@
   </div>
   <?php endif; ?>
   <div id='inner-wrap-footer'>
-    <div id='footer'><?=render_views('footer')?><?=$footer?><?=get_tools()?><?=get_debug()?></div>
+    <div id='footer'><?=render_views('footer')?><?=$footer?><!--et_tools()=get_debug()-->
+    </div>
   </div>
 </div>
 

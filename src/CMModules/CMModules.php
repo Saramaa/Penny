@@ -1,16 +1,16 @@
 <?php
 /**
- * A model for managing Lydia modules.
+ * A model for managing Penny modules.
  * 
- * @package LydiaCore
+ * @package PennyCore
  */
 class CMModules extends CObject {
 
   /**
    * Properties
    */
-  private $lydiaCoreModules = array('CLydia', 'CDatabase', 'CRequest', 'CViewContainer', 'CSession', 'CObject');
-  private $lydiaCMFModules = array('CForm', 'CCPage', 'CCBlog', 'CMUser', 'CCUser', 'CMContent', 'CCContent', 'CFormUserLogin', 'CFormUserProfile', 'CFormUserCreate', 'CFormContent', 'CHTMLPurifier');
+  private $pennyCoreModules = array('CPenny', 'CDatabase', 'CRequest', 'CViewContainer', 'CSession', 'CObject');
+  private $pennyCMFModules = array('CForm', 'CCPage', 'CCBlog', 'CMUser', 'CCUser', 'CMContent', 'CCContent', 'CFormUserLogin', 'CFormUserProfile', 'CFormUserCreate', 'CFormContent', 'CHTMLPurifier');
 
 
   /**
@@ -52,7 +52,7 @@ class CMModules extends CObject {
    *                Returns boolean false if $src can not be opened.
    */
   public function ReadAndAnalyse() {
-    $src = LYDIA_INSTALL_PATH.'/src';
+    $src = PENNY_INSTALL_PATH.'/src';
     if(!$dir = dir($src)) throw new Exception('Could not open the directory.');
     $modules = array();
     while (($module = $dir->read()) !== false) {
@@ -84,8 +84,8 @@ class CMModules extends CObject {
       $details['isModel']       = preg_match('/^CM[A-Z]/', $rc->name);
       $details['hasSQL']        = $rc->implementsInterface('IHasSQL');
       $details['isManageable']  = $rc->implementsInterface('IModule');
-      $details['isLydiaCore']   = in_array($rc->name, $this->lydiaCoreModules);
-      $details['isLydiaCMF']    = in_array($rc->name, $this->lydiaCMFModules);
+      $details['isPennyCore']   = in_array($rc->name, $this->pennyCoreModules);
+      $details['isPennyCMF']    = in_array($rc->name, $this->pennyCMFModules);
       $details['publicMethods']     = $rc->getMethods(ReflectionMethod::IS_PUBLIC);
       $details['protectedMethods']  = $rc->getMethods(ReflectionMethod::IS_PROTECTED);
       $details['privateMethods']    = $rc->getMethods(ReflectionMethod::IS_PRIVATE);

@@ -9,7 +9,7 @@
  * Get list of tools.
  */
 function get_tools() {
-  global $ly;
+  global $pen;
   return <<<EOD
 <p>Tools: 
 <a href="http://validator.w3.org/check/referer">html5</a>
@@ -24,34 +24,34 @@ EOD;
  */
 function get_debug() {
   // Only if debug is wanted.
-  $ly = CLydia::Instance();  
-  if(empty($ly->config['debug'])) {
+  $pen = CPenny::Instance();  
+  if(empty($pen->config['debug'])) {
     return;
   }
   
   // Get the debug output
   $html = null;
-  if(isset($ly->config['debug']['db-num-queries']) && $ly->config['debug']['db-num-queries'] && isset($ly->db)) {
-    $flash = $ly->session->GetFlash('database_numQueries');
+  if(isset($pen->config['debug']['db-num-queries']) && $pen->config['debug']['db-num-queries'] && isset($pen->db)) {
+    $flash = $pen->session->GetFlash('database_numQueries');
     $flash = $flash ? "$flash + " : null;
-    $html .= "<p>Database made $flash" . $ly->db->GetNumQueries() . " queries.</p>";
+    $html .= "<p>Database made $flash" . $pen->db->GetNumQueries() . " queries.</p>";
   }    
-  if(isset($ly->config['debug']['db-queries']) && $ly->config['debug']['db-queries'] && isset($ly->db)) {
-    $flash = $ly->session->GetFlash('database_queries');
-    $queries = $ly->db->GetQueries();
+  if(isset($pen->config['debug']['db-queries']) && $pen->config['debug']['db-queries'] && isset($pen->db)) {
+    $flash = $pen->session->GetFlash('database_queries');
+    $queries = $pen->db->GetQueries();
     if($flash) {
       $queries = array_merge($flash, $queries);
     }
     $html .= "<p>Database made the following queries.</p><pre>" . implode('<br/><br/>', $queries) . "</pre>";
   }    
-  if(isset($ly->config['debug']['timer']) && $ly->config['debug']['timer']) {
-    $html .= "<p>Page was loaded in " . round(microtime(true) - $ly->timer['first'], 5)*1000 . " msecs.</p>";
+  if(isset($pen->config['debug']['timer']) && $pen->config['debug']['timer']) {
+    $html .= "<p>Page was loaded in " . round(microtime(true) - $pen->timer['first'], 5)*1000 . " msecs.</p>";
   }    
-  if(isset($ly->config['debug']['lydia']) && $ly->config['debug']['lydia']) {
-    $html .= "<hr><h3>Debuginformation</h3><p>The content of CLydia:</p><pre>" . htmlent(print_r($ly, true)) . "</pre>";
+  if(isset($pen->config['debug']['penny']) && $pen->config['debug']['penny']) {
+    $html .= "<hr><h3>Debuginformation</h3><p>The content of CPenny:</p><pre>" . htmlent(print_r($pen, true)) . "</pre>";
   }    
-  if(isset($ly->config['debug']['session']) && $ly->config['debug']['session']) {
-    $html .= "<hr><h3>SESSION</h3><p>The content of CLydia->session:</p><pre>" . htmlent(print_r($ly->session, true)) . "</pre>";
+  if(isset($pen->config['debug']['session']) && $pen->config['debug']['session']) {
+    $html .= "<hr><h3>SESSION</h3><p>The content of CPenny->session:</p><pre>" . htmlent(print_r($pen->session, true)) . "</pre>";
     $html .= "<p>The content of \$_SESSION:</p><pre>" . htmlent(print_r($_SESSION, true)) . "</pre>";
   }    
   return $html;
@@ -62,7 +62,7 @@ function get_debug() {
  * Get messages stored in flash-session.
  */
 function get_messages_from_session() {
-  $messages = CLydia::Instance()->session->GetMessages();
+  $messages = CPenny::Instance()->session->GetMessages();
   $html = null;
   if(!empty($messages)) {
     foreach($messages as $val) {
@@ -79,10 +79,10 @@ function get_messages_from_session() {
  * Login menu. Creates a menu which reflects if user is logged in or not.
  */
 function login_menu() {
-  $ly = CLydia::Instance();
-  if($ly->user['isAuthenticated']) {
-    $items = "<a href='" . create_url('user/profile') . "'><img class='gravatar' src='" . get_gravatar(20) . "' alt=''> " . $ly->user['acronym'] . "</a> ";
-    if($ly->user['hasRoleAdministrator']) {
+  $pen = CPenny::Instance();
+  if($pen->user['isAuthenticated']) {
+    $items = "<a href='" . create_url('user/profile') . "'><img class='gravatar' src='" . get_gravatar(20) . "' alt=''> " . $pen->user['acronym'] . "</a> ";
+    if($pen->user['hasRoleAdministrator']) {
       $items .= "<a href='" . create_url('acp') . "'>acp</a> ";
     }
     $items .= "<a href='" . create_url('user/logout') . "'>logout</a> ";
@@ -97,7 +97,7 @@ function login_menu() {
  * Get a gravatar based on the user's email.
  */
 function get_gravatar($size=null) {
-  return 'http://www.gravatar.com/avatar/' . md5(strtolower(trim(CLydia::Instance()->user['email']))) . '.jpg?r=pg&amp;d=wavatar&amp;' . ($size ? "s=$size" : null);
+  return 'http://www.gravatar.com/avatar/' . md5(strtolower(trim(CPenny::Instance()->user['email']))) . '.jpg?r=pg&amp;d=wavatar&amp;' . ($size ? "s=$size" : null);
 }
 
 
@@ -139,7 +139,7 @@ function time_diff($start) {
  * Prepend the base_url.
  */
 function base_url($url=null) {
-  return CLydia::Instance()->request->base_url . trim($url, '/');
+  return CPenny::Instance()->request->base_url . trim($url, '/');
 }
 
 
@@ -151,7 +151,7 @@ function base_url($url=null) {
  * @param string the extra arguments to the method, leave empty if not using method.
  */
 function create_url($urlOrController=null, $method=null, $arguments=null) {
-  return CLydia::Instance()->CreateUrl($urlOrController, $method, $arguments);
+  return CPenny::Instance()->CreateUrl($urlOrController, $method, $arguments);
 }
 
 
@@ -162,7 +162,7 @@ function create_url($urlOrController=null, $method=null, $arguments=null) {
  * @returns string the absolute url.
  */
 function theme_url($url) {
-  return create_url(CLydia::Instance()->themeUrl . "/{$url}");
+  return create_url(CPenny::Instance()->themeUrl . "/{$url}");
 }
 
 
@@ -173,7 +173,7 @@ function theme_url($url) {
  * @returns string the absolute url.
  */
 function theme_parent_url($url) {
-  return create_url(CLydia::Instance()->themeParentUrl . "/{$url}");
+  return create_url(CPenny::Instance()->themeParentUrl . "/{$url}");
 }
 
 
@@ -181,7 +181,7 @@ function theme_parent_url($url) {
  * Return the current url.
  */
 function current_url() {
-  return CLydia::Instance()->request->current_url;
+  return CPenny::Instance()->request->current_url;
 }
 
 
@@ -191,7 +191,7 @@ function current_url() {
  * @param $region string the region to draw the content in.
  */
 function render_views($region='default') {
-  return CLydia::Instance()->views->Render($region);
+  return CPenny::Instance()->views->Render($region);
 }
 
 
@@ -201,5 +201,5 @@ function render_views($region='default') {
  * @param $region string the region to draw the content in.
  */
 function region_has_content($region='default' /*...*/) {
-  return CLydia::Instance()->views->RegionHasView(func_get_args());
+  return CPenny::Instance()->views->RegionHasView(func_get_args());
 }

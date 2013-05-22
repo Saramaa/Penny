@@ -12,5 +12,9 @@
   </ul>
 <?php else: ?>
   <p>User is anonymous and not authenticated.</p>
+  
 <?php endif; ?>
-
+<?php if($is_authenticated && $Admin): ?>
+ 
+ <a href='../acp' title='Go to Admin Control Panel'>Go to Admin Control Panel</a></p>
+<?php endif; ?>
