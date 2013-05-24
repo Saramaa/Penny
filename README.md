@@ -48,8 +48,8 @@ Does it make sense?</h5>"
 
 Just click continue and you are in!
 Penny will go through this steps and when it's done you will see:
-<c>"<h2>Welcome</h2>
-<h5>This is Penny, ready to be used.</h5>"</c>
+<center>"<h2>Welcome</h2>
+<h5>This is Penny, ready to be used.</h5>"</center>
 
 If you didn't make the site/data writable in the beginning, you will see this:
 <code>Failed. The data directory exists but it is NOT writable.</code>
@@ -61,5 +61,31 @@ Just do what it says and continue.
 Personalize Penny
 ==================
 Yes, I'll tell you how to find the places in the code where you can do your own changes.
+Open <code>site/config.php</code>. 
+<h4>Header</h4>
+Scroll down to the bottom and you will see <code>'header' => 'Penny',</code>.
+There you can change the header.
+<h4>Slogan</h4>
+<code>'slogan' => 'Knock knock knock, Penny',</code> is the place to change the slogan. 
+<h4>Favicon and logo</h4>
+If you want to change the favicon and the logo, here's the place for that:
+<code>'favicon' => '../../../img/Penny.png',</code>
+<code>'logo' => '../../../img/Penny.png',</code>
+At first, you need to put another image in the <code>img</code> folder ang then type the name of the image in the code/codes above.
+<h4>Footer</h4>
+If you want to change the footer, here's the code for that: 
+<code>'footer' => '<p>Penny &copy; by Anna Dahlgren</p>',</code>.
+<h4>Navigation</h4>
+If you want to change in the navigation menu, you have to scroll up a bit.
+When you find <code>$pen->config['menus']</code> you are close!
+Find this code: <code>'my-navbar' => array(</code> and change for example from <code>'home'      => array('label'=>'About Me', 'url'=>'my'),</code>
+to <code> 'home'      => array('label'=>'This is a page about meeeeeeee', 'url'=>'my'),</code>.
+(I changed the About me text). 
+
+Change the theme
+----------------
+Open <code>site/themes/mytheme</code>.
+
+
 
 
