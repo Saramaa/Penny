@@ -34,32 +34,32 @@ You can do this step later on when you install Penny.
 <code>chmod 777 site/data</code>
 
 When you are ready to install you will see the start page saying:
-<code>Overview
+"<h3>Overview</h3>
 
-Welcome to Penny. This is the installation phase of Penny.
-
+<h5>Welcome to Penny. This is the installation phase of Penny.
 You will go through the following steps:
 
-Verify the server environment.
-Verify that the directory site/data is writable.
-Verify that the default database is available.
-Install all Penny modules.
-Review settings in the configuration file, config.php.
-Does it make sense?</code>
+*Verify the server environment.
+*Verify that the directory site/data is writable.
+*Verify that the default database is available.
+*Install all Penny modules.
+*Review settings in the configuration file, config.php.
+Does it make sense?</h5>"
 
 Just click continue and you are in!
 Penny will go through this steps and when it's done you will see:
-<code>Welcome
-
-This is Penny, ready to be used.</code>
+"<h2>Welcome</h2>
+<h5>This is Penny, ready to be used.</h5>"
 
 If you didn't make the site/data writable in the beginning, you will see this:
-<code>Failed. The data directory exists but it is NOT writable.
+<code>Failed. The data directory exists but it is NOT writable.</code>
 
 Correct this by changing the permissions on the directory.
-
-cd penny; chmod 777 site/data</code>
+<code>cd penny; chmod 777 site/data</code>
 Just do what it says and continue. 
 
+Personalize Penny
+==================
+Yes, I'll tell you how to find the places in the code where you can do your own changes.
 
 
