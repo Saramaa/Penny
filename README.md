@@ -81,20 +81,26 @@ to <code> 'home'      => array('label'=>'This is a page about meeeeeeee', 'url'=
 
 Change the theme
 ----------------
-Open <code>site/themes/mytheme</code>.
+Open <code>site/themes/mytheme/style.css</code>. <br/>
+Feel free to change the theme! 
+The background color for the html, body and outer-wrap-footer is now the same. 
+Maybe that´s the best. Of course, you decide! But remember my reminder. 
+I do not recommend you to change more in the theme, but if you really, really want to, I´ll tell you where to start.
+In <code>themes/grid/style.css</code> and <code>themes/grid/style.php</code> is the rest of the CSS code.
+Feel free to check it out, but only if you really know what you are doing!
 
 Use the site
 ============
 You can create a content and view as a blog or page.
 Just type "blog" or "page" in the column Type. 
 You can fill it in like this:
-Title: <code>Page with BBCode</code>
-Key: <code>bbcode</code>
-Content: <code>[b]Text in bold[/b]</code> (Or whatever you want to write)
-Type: <code>page</code>
-Filter: <code>bbcode</code>
+* Title: <code>Page with BBCode</code>
+* Key: <code>bbcode</code>
+* Content: <code>[b]Text in bold[/b]</code> (Or whatever you want to write)
+* Type: <code>page</code>
+* Filter: <code>bbcode</code>
 
 There is a guestbook you or anybody can use to write something.
 If you want to, you can enable the options of deleting all the messages by delete some code in <code>src/CCGuestbook/index.tpl.php</code>
-On line 11, delete <code><!--</code> and <code>--></code>
+On line 11, delete <code><!--</code> and <code>--></code>.
 
