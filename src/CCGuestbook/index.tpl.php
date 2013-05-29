@@ -9,7 +9,6 @@
   <p>
     <input type='submit' name='doAdd' value='Publicera' />
    <!-- <input type='submit' name='doClear' value='Radera alla meddelanden' />-->
-   <!--<input type='submit' name='doCreate' value='Skapa databastabell' /> -->
   </p>
 </form>
 

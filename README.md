@@ -34,9 +34,7 @@ You can do this step later on when you install Penny.
 <code>chmod 777 site/data</code>
 
 When you are ready to install you will see the start page saying:
-"<h3>Overview</h3>
-
-<h5>Welcome to Penny. This is the installation phase of Penny.
+"<h5>Welcome to Penny. This is the installation phase of Penny.
 You will go through the following steps:
 
 * Verify the server environment.
@@ -48,8 +46,7 @@ Does it make sense?</h5>"
 
 Just click continue and you are in!
 Penny will go through this steps and when it's done you will see:
-<center>"<h2>Welcome</h2>
-<h5>This is Penny, ready to be used.</h5>"</center>
+"<h5>This is Penny, ready to be used.</h5>"
 
 If you didn't make the site/data writable in the beginning, you will see this:
 <code>Failed. The data directory exists but it is NOT writable.</code>
@@ -74,7 +71,7 @@ If you want to change the favicon and the logo, here's the place for that:
 At first, you need to put another image in the <code>img</code> folder ang then type the name of the image in the code/codes above.
 <h4>Footer</h4>
 If you want to change the footer, here's the code for that: 
-<code>'footer' => '<p>Penny &copy; by Anna Dahlgren</p>',</code>.
+<code>'footer' => 'Penny &copy; by Anna Dahlgren',</code>.
 <h4>Navigation</h4>
 If you want to change in the navigation menu, you have to scroll up a bit.
 When you find <code>$pen->config['menus']</code> you are close!
@@ -86,6 +83,18 @@ Change the theme
 ----------------
 Open <code>site/themes/mytheme</code>.
 
+Use the site
+============
+You can create a content and view as a blog or page.
+Just type "blog" or "page" in the column Type. 
+You can fill it in like this:
+Title: <code>Page with BBCode</code>
+Key: <code>bbcode</code>
+Content: <code>[b]Text in bold[/b]</code> (Or whatever you want to write)
+Type: <code>page</code>
+Filter: <code>bbcode</code>
 
-
+There is a guestbook you or anybody can use to write something.
+If you want to, you can enable the options of deleting all the messages by delete some code in <code>src/CCGuestbook/index.tpl.php</code>
+On line 11, delete <code><!--</code> and <code>--></code>
 
