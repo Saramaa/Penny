@@ -17,7 +17,7 @@ But... you cannot delete yourself. You cannot delete the anonomous or the doe us
 You acces the Admin Control Panel when you log in as root. 
 Other users are not able to see the link to the Admin Control Panel.
 
-Important about the Administator
+Important about the Administrator
 --------------------------------
 When Penny is installed, the Administrator logs in as root and password root.
 It is important to change the password so only you know about it. 
@@ -104,3 +104,6 @@ There is a guestbook you or anybody can use to write something.
 If you want to, you can enable the options of deleting all the messages by delete some code in <code>src/CCGuestbook/index.tpl.php</code>
 On line 11, delete <code><!--</code> and <code>--></code>.
 
+Good luck
+============
+Good luck with Penny! 
